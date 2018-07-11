@@ -1,0 +1,31 @@
+body {
+  background: linear-gradient(180deg, #27102d 0%, #3d262c 8%, #5e4a43 30%, #807d6e 50%, #958375 80%, #a7927d 100%);
+  background-attachment: fixed;
+  font-size: 16px;
+}
+.wrapper {
+  width: 980px;
+  margin: 0 auto;
+}
+@font-face {
+  font-family: 'EauSansBook';
+  src: url('assets/fonts/EauSansBook/EauSansBook.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'EauSansBold';
+  src: url('assets/fonts/EauSansBold/EauSansBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.colapsefix:before {
+  content: "";
+  display: block;
+  overflow: hidden;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}

@@ -1,0 +1,23 @@
+<div class="row">
+  <header id="login-header">
+    <a href="index.html">
+      <i class="fa fa-cube" aria-hidden="true"></i>
+      <h2>Novus</h2>
+      <p>Admin Panel Template</p>
+    </a>
+    <button (click)="Toggle()">
+      <i class="fa fa-cog" aria-hidden="true"></i>
+    </button>
+  </header>
+
+  <div class="drop-menu" [ngClass]="{ 'visible': showMenu }">
+    <ul>
+      <li> <i class="fa fa-pencil" aria-hidden="true"></i> Edit </li>
+      <li> <i class="fa fa-trash-o" aria-hidden="true"></i> Delete </li>
+      <li> <i class="fa fa-ban" aria-hidden="true"></i> Ban </li>
+      <li>Other options</li>
+    </ul>
+  </div>
+
+</div>
+

@@ -1,0 +1,8 @@
+section {
+  position: absolute;
+  top: -250px;
+}
+section h3,
+section p {
+  margin: 0;
+}

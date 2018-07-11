@@ -1,0 +1,47 @@
+<div id="top-admin-header">
+  <div id="logo">
+    <a routerLink="/admin-panel">
+      <i class="fa fa-cube" aria-hidden="true"></i>
+      <h2>Novus</h2>
+      <p>Admin Panel Template</p>
+    </a>
+  </div>
+
+  <nav class='main-menu'>
+    <ul>
+      <li>
+        <input class="form-control" type="text" placeholder="Search ..."/>
+      </li>
+      <li>
+        <button>
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+      </li>
+      <li>
+        <button (click)="Toggle()">
+          <i class="fa fa-cog" aria-hidden="true"></i>
+        </button>
+      </li>
+      <li>
+        <button>
+          <i class="fa fa-comment" aria-hidden="true"></i>
+        </button>
+      </li>
+      <li>
+        <button (click)="Close()">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="drop-menu" [ngClass]="{ 'visible': showMenu }">
+  <ul>
+    <li> <i class="fa fa-pencil" aria-hidden="true"></i> Edit </li>
+    <li> <i class="fa fa-trash-o" aria-hidden="true"></i> Delete </li>
+    <li> <i class="fa fa-ban" aria-hidden="true"></i> Ban </li>
+    <li>Other options</li>
+  </ul>
+</div>
+

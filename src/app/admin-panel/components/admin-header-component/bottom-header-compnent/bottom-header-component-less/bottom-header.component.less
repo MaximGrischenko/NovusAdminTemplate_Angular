@@ -1,0 +1,121 @@
+@import "../../../../../../assets/less/components/mixins.less";
+@import "../../../../../../assets/less/components/variables.less";
+
+#bottom-admin-header {
+  padding: 18px 20px;
+  min-height: 100px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  background-color: @bottom-header-background-color;
+  overflow: auto;
+  border-bottom: 1px solid #706866;
+
+  #user-block {
+    &:after {
+      content: '>';
+      color: #fff;
+      font-size: 24px;
+      position: absolute;
+      top: 17px;
+      right: 20px;
+    }
+
+    a {
+      display: block;
+      float: left;
+      min-height: 40px;
+      width: 100%;
+      text-decoration: none;
+      color: @bottom-h2-color;
+      font-size: 16px;
+
+      img {
+        display: block;
+        float: left;
+        margin-right: 15px;
+        font-size: 4em;
+      }
+
+      h2 {
+        line-height: 30px;
+        margin: 10px 0 0 30px;
+        font-family: EauSansBold, sans-serif;
+        font-weight: 700;
+        font-size: 1.125em;
+      }
+
+      p {
+        margin: 0 0 0 35px;
+        color: @bottom-p-color;
+        font-family: EauSansBook, sans-serif;
+        font-size: 0.75em;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .stat-menu {
+    padding: 0;
+
+    ul {
+      margin-top: 10px;
+      padding: 0;
+
+      li {
+        .select-text(none);
+        padding: 0 0 0 20px;
+        display: inline-block;
+        min-height: 40px;
+
+        div {
+          position: absolute;
+          top: -20px;
+          left: 65px;
+          max-height: 20px;
+          padding: 0 5px;
+          background-color: @bottom-stat-background-color;
+          border-radius: 10px;
+          font-size: 14px;
+          color: #fff;
+          line-height: 20px;
+        }
+
+        &:not(:last-child) {
+          border-right: 1px solid @bottom-border-color;
+        }
+
+        &:nth-child(3) {
+          visits-histogram {
+            float: right;
+            margin-top: -10px;
+            margin-right: 15px;
+          }
+        }
+
+        &:last-child {
+          balance-histogram {
+            float: right;
+            margin-top: -10px;
+          }
+        }
+
+        h3 {
+          float: left;
+          margin: 0;
+          font-size: 16px;
+          color: @bottom-h3-color;
+          font-weight: 300;
+
+          span {
+            margin: 0;
+            font-family: EauSansBold, sans-serif;
+            line-height: 28px;
+            color: @bottom-h1-color;
+            font-size: 21px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+

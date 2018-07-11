@@ -1,0 +1,34 @@
+.add-font(@font-url, @font-name, @font-weight: normal, @font-style: normal) {
+  font-family: @font-name;
+  src: url('@{font-folder}@{font-url}.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.select-text(@prop) {
+  -webkit-user-select: @prop;
+  -moz-user-select: @prop;
+  cursor: pointer;
+}
+
+.transition(@prop: all, @time: 0.2s, @ease: ease-in-out) {
+  -webkit-transition: @prop @time @ease;
+  -moz-transition: @prop @time @ease;
+  -o-transition: @prop @time @ease;
+  transition: @prop @time @ease;
+}
+
+.placeholder(@rules) {
+  &::-webkit-input-placeholder {
+    @rules();
+  }
+  &:-moz-placeholder {
+    @rules();
+  }
+  &::-moz-placeholder {
+    @rules();
+  }
+  &:-ms-input-placeholder {
+    @rules();
+  }
+}

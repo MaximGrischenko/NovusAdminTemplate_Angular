@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div class="row">
+    <header class="col-md-12">
+      <top-header-component></top-header-component>
+      <bottom-header-component></bottom-header-component>
+    </header>
+  </div>
+  <div class="row main-container">
+    <sidebar-component class="col-md-1" style="z-index: 2;"></sidebar-component>
+    <div class="col-md-11">
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
+

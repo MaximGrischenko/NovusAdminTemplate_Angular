@@ -1,0 +1,57 @@
+#login-form {
+  padding: 10px 20px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  background-color: #dddddd;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: auto;
+  text-align: center;
+}
+#login-form .user-icon {
+  width: 65px;
+  height: 65px;
+  margin: 30px auto;
+}
+#login-form .user-icon i {
+  -webkit-text-fill-color: #c3c3c3;
+  -webkit-text-stroke: 2px #7A706E;
+  font-size: 65px;
+  transform: scaleY(1);
+}
+#login-form .user-icon i.hide {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  transform: scaleY(0);
+}
+#login-form .user-icon img {
+  transform: scaleY(0);
+}
+#login-form .user-icon img.show {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  transform: scaleY(1);
+}
+#login-form .user-name {
+  margin-bottom: 20px;
+  min-height: 30px;
+}
+#login-form .user-name h1 {
+  font-size: 1.5em;
+  font-family: EauSansBook, sans-serif;
+  color: #27102d;
+}
+#login-form label {
+  margin: 10px 0;
+  font-size: 1.2em;
+  font-family: EauSansBook, sans-serif;
+  color: #3f3f3f;
+}
+#login-form input.ng-touched.ng-invalid {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}

@@ -1,0 +1,99 @@
+#bottom-admin-header {
+  padding: 18px 20px;
+  min-height: 100px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  background-color: #8fd7d4;
+  overflow: auto;
+  border-bottom: 1px solid #706866;
+}
+#bottom-admin-header #user-block:after {
+  content: '>';
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+}
+#bottom-admin-header #user-block a {
+  display: block;
+  float: left;
+  min-height: 40px;
+  width: 100%;
+  text-decoration: none;
+  color: #3f3f3f;
+  font-size: 16px;
+}
+#bottom-admin-header #user-block a img {
+  display: block;
+  float: left;
+  margin-right: 15px;
+  font-size: 4em;
+}
+#bottom-admin-header #user-block a h2 {
+  line-height: 30px;
+  margin: 10px 0 0 30px;
+  font-family: EauSansBold, sans-serif;
+  font-weight: 700;
+  font-size: 1.125em;
+}
+#bottom-admin-header #user-block a p {
+  margin: 0 0 0 35px;
+  color: #ffffff;
+  font-family: EauSansBook, sans-serif;
+  font-size: 0.75em;
+  font-weight: 300;
+}
+#bottom-admin-header .stat-menu {
+  padding: 0;
+}
+#bottom-admin-header .stat-menu ul {
+  margin-top: 10px;
+  padding: 0;
+}
+#bottom-admin-header .stat-menu ul li {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  cursor: pointer;
+  padding: 0 0 0 20px;
+  display: inline-block;
+  min-height: 40px;
+}
+#bottom-admin-header .stat-menu ul li div {
+  position: absolute;
+  top: -20px;
+  left: 65px;
+  max-height: 20px;
+  padding: 0 5px;
+  background-color: #e86f56;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 20px;
+}
+#bottom-admin-header .stat-menu ul li:not(:last-child) {
+  border-right: 1px solid #7db8b6;
+}
+#bottom-admin-header .stat-menu ul li:nth-child(3) visits-histogram {
+  float: right;
+  margin-top: -10px;
+  margin-right: 15px;
+}
+#bottom-admin-header .stat-menu ul li:last-child balance-histogram {
+  float: right;
+  margin-top: -10px;
+}
+#bottom-admin-header .stat-menu ul li h3 {
+  float: left;
+  margin: 0;
+  font-size: 16px;
+  color: 3e 3e 3e;
+  font-weight: 300;
+}
+#bottom-admin-header .stat-menu ul li h3 span {
+  margin: 0;
+  font-family: EauSansBold, sans-serif;
+  line-height: 28px;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 700;
+}

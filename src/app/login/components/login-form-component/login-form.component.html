@@ -1,0 +1,33 @@
+<div class="row">
+  <div id="login-form">
+    <div class="user-icon">
+      <i class="fa fa-user-circle-o" [ngClass]="{ 'hide': nameValid }"></i>
+      <img [ngClass]="{ 'show': nameValid }" src = {{adminData.urlAvatar}}/>
+    </div>
+    <div class="user-name">
+      <h1>{{adminData.firstName}} {{adminData.lastName}}</h1>
+    </div>
+    <form>
+      <label>Login</label>
+      <div class="form-group input-group">
+        <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+        <input class="form-control" type="text" name="userName" id="userName" placeholder="Username"
+               [(ngModel)]="userName" #UserName="ngModel" [disabled]="nameValid" required>
+      </div>
+      <div class="form-group input-group" [ngClass]="{ 'hidden': !nameValid }">
+        <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+        <input class="form-control" type="password" name="userPassword" id="userPassword" placeholder="Password"
+               [(ngModel)]="userPassword" #UserPassword="ngModel" required>
+      </div>
+      <div [hidden]="!message.length" class="alert alert-danger">
+        {{message}}
+      </div>
+      <div class="col-md-6 col-md-offset-6">
+        <input class="btn btn-primary btn-block" type="button" value="{{nameValid? 'Login' : 'Next'}}"
+               [disabled]="UserName.invalid" (click)="Login(UserName, UserPassword)">
+      </div>
+    </form>
+  </div>
+</div>
+
+

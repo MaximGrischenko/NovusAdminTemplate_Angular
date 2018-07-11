@@ -1,0 +1,15 @@
+.row.main-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.main-container > [class*='col-'] {
+  display: flex;
+}
+
+.content {
+  width: 100%;
+  background-color: #f6f6f6;
+}

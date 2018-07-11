@@ -1,0 +1,85 @@
+<nav>
+  <div class="col-md-3">
+    <h2>Dashboard</h2>
+    <p>Welcome</p>
+  </div>
+  <ul class="col-md-offset-3">
+    <li class="col-md-2" [class.active]="tabIndex == 0">
+      <a (click)="Toggle($event)" data-index="0">
+        <i class="fa fa-th" aria-hidden="true" data-index="0"></i>
+        <p data-index="0">Quick Menu Actions</p>
+      </a>
+    </li>
+    <li class="col-md-2" [class.active]="tabIndex == 1">
+      <a (click)="Toggle($event)" data-index="1">
+        <i class="fa fa-bar-chart" aria-hidden="true" data-index="1"></i>
+        <p data-index="1">Web Site Statistics</p>
+      </a>
+    </li>
+    <li class="col-md-1" [class.active]="tabIndex == 2">
+      <a (click)="Toggle($event)" data-index="2">
+        <i class="fa fa-calendar" aria-hidden="true" data-index="2"></i>
+        <p data-index="2">Calendar</p>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<div class="tab-content" [style.maxHeight]="tabIndex==0?'131px':'231px'"
+                         [style.minHeight]="tabIndex!=0?'231px':'131px'">
+  <div class="quick-menu" [class.visible]="tabIndex == 0">
+    <div class="col-md-2">
+      <div class="box">
+        <a class="hexagon lightred">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="box">
+      <a class="hexagon lightblue">
+          <i class="fa fa-google-wallet" aria-hidden="true"></i>
+      </a>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="box">
+        <a class="hexagon grey">
+          <i class="fa fa-repeat" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="box">
+        <a class="hexagon red">
+          <i class="fa fa-cog" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="box">
+        <a class="hexagon blue">
+          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="box">
+        <a class="hexagon grey">
+          <i class="fa fa-list" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="website-stat-menu" [class.visible]="tabIndex == 1">
+    <website-statistic-chart></website-statistic-chart>
+  </div>
+
+  <div class="website-calendar" [class.visible]="tabIndex == 2" style="margin-top: -380px">
+    <img src="../../../../../assets/images/calendar.png">
+
+  </div>
+</div>
+
+

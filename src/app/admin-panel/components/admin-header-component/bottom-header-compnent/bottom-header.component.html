@@ -1,0 +1,42 @@
+<div id="bottom-admin-header">
+  <div id="user-block" class=" col-md-4">
+    <a routerLink="/admin-panel">
+      <img src = {{adminData.urlAvatar}}/>
+      <h2>{{adminData.firstName}} {{adminData.lastName}}</h2>
+      <p>{{adminData.emailAdress}}</p>
+    </a>
+  </div>
+
+  <nav class='stat-menu col-md-8'>
+    <ul>
+      <li class="col-md-2">
+        <div>+{{statisticData.newUsers}}</div>
+        <h3>Users <br/>
+          <span>{{statisticData.users}}</span>
+        </h3>
+      </li>
+      <li class="col-md-2">
+        <div>+{{statisticData.newOrders}}</div>
+        <h3>Orders <br/>
+          <span>{{statisticData.orders}}</span>
+        </h3>
+      </li>
+      <li class="col-md-4">
+        <div>+{{statisticData.newVisits}}</div>
+        <h3> Visits <br/>
+          <span>{{statisticData.visits}}</span>
+        </h3>
+        <visits-histogram></visits-histogram>
+      </li>
+      <li class="col-md-4">
+        <h3>Balance <br/>
+          <span>{{statisticData.balance}}</span>
+        </h3>
+        <balance-histogram></balance-histogram>
+      </li>
+    </ul>
+  </nav>
+
+</div>
+
+
